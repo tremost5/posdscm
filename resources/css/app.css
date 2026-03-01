@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        font-family: 'Space Grotesk', sans-serif;
+    }
+}
+
+@layer components {
+    .nav-pill {
+        @apply inline-flex items-center rounded-lg px-3 py-2 text-sm text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition;
+    }
+
+    .nav-pill.active {
+        @apply bg-teal-600 text-white hover:bg-teal-700 hover:text-white;
+    }
+
+    .card {
+        @apply rounded-2xl border border-slate-200 bg-white shadow-sm;
+    }
+
+    .stat-card {
+        @apply rounded-2xl p-5 text-white shadow-lg;
+    }
+
+    .btn-primary {
+        @apply inline-flex items-center justify-center rounded-lg bg-teal-600 px-4 py-2 text-sm font-medium text-white hover:bg-teal-700 transition;
+    }
+
+    .btn-soft {
+        @apply inline-flex items-center justify-center rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 transition;
+    }
+
+    .input {
+        @apply w-full rounded-lg border-slate-300 focus:border-teal-500 focus:ring-teal-500 text-sm;
+    }
+}
+
+.bg-app-pattern {
+    background-image: radial-gradient(circle at 20% 10%, #ccfbf1 0%, transparent 30%),
+        radial-gradient(circle at 80% 0%, #cffafe 0%, transparent 25%),
+        linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+}
